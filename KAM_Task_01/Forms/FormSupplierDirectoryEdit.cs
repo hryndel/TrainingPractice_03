@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using System.Windows.Forms;
@@ -24,8 +23,8 @@ namespace KAM_Task_01.Forms
             //if (MessageBox.Show("Вы хотите удалить запись?", "Информация", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.OK)
             //{
                 connection.Open();
-                SqlCommand command = new SqlCommand("DELETE FROM [SupplierDirectory] WHERE IdSupplier = @pId", connection); //TableName - имя таблицы, из которой удаляете запись
-                command.Parameters.Add(new SqlParameter("@pId", dataGridViewSupplierDirectory.CurrentRow.Cells["ColumnID"].Value)); //DataGridViewName - имя DataGridView на форме
+                SqlCommand command = new SqlCommand("DELETE FROM [SupplierDirectory] WHERE IdSupplier = @pId", connection);
+                command.Parameters.Add(new SqlParameter("@pId", dataGridViewSupplierDirectory.CurrentRow.Cells["ColumnID"].Value));
                 command.ExecuteNonQuery();
                 connection.Close();
                 FormSupplierDirectoryEdit_Load(sender, e);

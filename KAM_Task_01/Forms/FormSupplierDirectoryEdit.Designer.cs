@@ -36,8 +36,6 @@
             this.buttonAdd = new System.Windows.Forms.Button();
             this.buttonDelete = new System.Windows.Forms.Button();
             this.dataGridViewSupplierDirectory = new System.Windows.Forms.DataGridView();
-            this.ColumnID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.azsDataSet = new KAM_Task_01.AZSDataSet();
             this.groupBoxAdd = new System.Windows.Forms.GroupBox();
@@ -46,8 +44,8 @@
             this.StatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.buttonSave = new System.Windows.Forms.Button();
             this.supplierDirectoryTableAdapter = new KAM_Task_01.AZSDataSetTableAdapters.SupplierDirectoryTableAdapter();
-            this.idSupplierDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSupplierDirectory)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.azsDataSet)).BeginInit();
@@ -110,31 +108,13 @@
             this.dataGridViewSupplierDirectory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewSupplierDirectory.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ColumnID,
-            this.ColumnName,
-            this.idSupplierDataGridViewTextBoxColumn,
-            this.nameDataGridViewTextBoxColumn});
+            this.ColumnName});
             this.dataGridViewSupplierDirectory.DataSource = this.bindingSource;
             this.dataGridViewSupplierDirectory.Location = new System.Drawing.Point(12, 41);
             this.dataGridViewSupplierDirectory.Name = "dataGridViewSupplierDirectory";
             this.dataGridViewSupplierDirectory.Size = new System.Drawing.Size(403, 158);
             this.dataGridViewSupplierDirectory.TabIndex = 7;
             this.dataGridViewSupplierDirectory.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dataGridViewSupplierDirectory_KeyDown);
-            // 
-            // ColumnID
-            // 
-            this.ColumnID.DataPropertyName = "IdSupplier";
-            this.ColumnID.HeaderText = "ID";
-            this.ColumnID.Name = "ColumnID";
-            this.ColumnID.ReadOnly = true;
-            this.ColumnID.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // ColumnName
-            // 
-            this.ColumnName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.ColumnName.DataPropertyName = "Name";
-            this.ColumnName.HeaderText = "Название";
-            this.ColumnName.Name = "ColumnName";
-            this.ColumnName.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
             // bindingSource
             // 
@@ -199,18 +179,21 @@
             // 
             this.supplierDirectoryTableAdapter.ClearBeforeFill = true;
             // 
-            // idSupplierDataGridViewTextBoxColumn
+            // ColumnID
             // 
-            this.idSupplierDataGridViewTextBoxColumn.DataPropertyName = "IdSupplier";
-            this.idSupplierDataGridViewTextBoxColumn.HeaderText = "IdSupplier";
-            this.idSupplierDataGridViewTextBoxColumn.Name = "idSupplierDataGridViewTextBoxColumn";
-            this.idSupplierDataGridViewTextBoxColumn.ReadOnly = true;
+            this.ColumnID.DataPropertyName = "IdSupplier";
+            this.ColumnID.HeaderText = "ID";
+            this.ColumnID.Name = "ColumnID";
+            this.ColumnID.ReadOnly = true;
+            this.ColumnID.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
-            // nameDataGridViewTextBoxColumn
+            // ColumnName
             // 
-            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
-            this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
-            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            this.ColumnName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ColumnName.DataPropertyName = "Name";
+            this.ColumnName.HeaderText = "Название";
+            this.ColumnName.Name = "ColumnName";
+            this.ColumnName.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
             // FormSupplierDirectoryEdit
             // 
@@ -261,7 +244,5 @@
         private System.Windows.Forms.BindingSource bindingSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnID;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idSupplierDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
     }
 }

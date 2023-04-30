@@ -1,5 +1,4 @@
-﻿using KAM_Task_01.AZSDataSetTableAdapters;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Windows.Forms;
@@ -109,8 +108,8 @@ namespace KAM_Task_01.Forms
             //if (MessageBox.Show("Вы хотите удалить запись?", "Информация", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.OK)
             //{
                 connection.Open();
-                SqlCommand command = new SqlCommand("DELETE FROM [TypesOfFuel] WHERE IdFuel = @pId", connection); //TableName - имя таблицы, из которой удаляете запись
-                command.Parameters.Add(new SqlParameter("@pId", dataGridViewFuel.CurrentRow.Cells["ColumnID"].Value)); //DataGridViewName - имя DataGridView на форме
+                SqlCommand command = new SqlCommand("DELETE FROM [TypesOfFuel] WHERE IdFuel = @pId", connection);
+                command.Parameters.Add(new SqlParameter("@pId", dataGridViewFuel.CurrentRow.Cells["ColumnID"].Value));
                 command.ExecuteNonQuery();
                 connection.Close();
                 FormFuelEdit_Load(sender, e);
