@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.Common;
 using System.Data.SqlClient;
 using System.Windows.Forms;
 
@@ -32,7 +34,6 @@ namespace KAM_Task_01.Forms
         private void Zapros(string query)
         {
             dataGridViewFuel.Rows.Clear();
-
             connection.Open();
             SqlCommand command = new SqlCommand(query, connection);
             SqlDataReader reader = command.ExecuteReader();
